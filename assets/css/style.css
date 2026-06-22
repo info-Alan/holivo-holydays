@@ -214,7 +214,7 @@ nav.scrolled {
 .logo-text {
     font-size: 1.5rem;
     color: var(--gold);
-    margin-left: 10px;
+    /* margin-left: 10px; */
 }
 
 .nav-links {
