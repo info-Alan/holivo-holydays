@@ -4,40 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HOLIVO HOLIDAYS | Discover the Hidden Side of Kerala</title>
+    <title>HOLIVO HOLIDAYS | Premium Kerala Travel & Munnar Tour Packages</title>
     <meta name="description"
-        content="Experience Munnar, tea plantations, waterfalls, wildlife, adventure, and unforgettable memories with personalized travel packages by Holivo Holidays.">
-
-    <!-- Google Fonts -->
+        content="Explore Munnar's tea gardens, misty hills, waterfalls and wildlife with Holivo Holidays — Kerala's trusted luxury travel company. Personalised packages, expert guides, premium stays.">
+    <meta name="keywords" content="Kerala travel, Munnar, holiday packages, luxury travel, Holivo Holidays">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
         rel="stylesheet">
-
-    <!-- FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
 
-    <!-- CUSTOM CURSOR -->
+    <!-- CURSOR -->
     <div class="cursor-dot"></div>
     <div class="cursor-outline"></div>
 
     <!-- PRELOADER -->
-    <div class="preloader">
-        <div class="preloader-text">
-            <span>H</span><span>o</span><span>l</span><span>i</span><span>v</span><span>o</span>
+    <div class="preloader" id="preloader">
+        <div class="preloader-logo" style="font-size:2rem;letter-spacing:.15em">
+            <span>H</span><span>o</span><span>l</span><span>i</span><span>v</span><span>o</span>&nbsp;<span>H</span><span>o</span><span>l</span><span>i</span><span>d</span><span>a</span><span>y</span><span>s</span>
         </div>
+        <div class="preloader-line"></div>
     </div>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <a href="#" class="logo interactable">Holivo</a>
+    <!-- NAV -->
+    <nav id="navbar">
+        <a href="#" class="logo interactable">Holivo Holidays</a>
         <div class="nav-links">
             <a href="#about" class="nav-link interactable">About</a>
             <a href="#services" class="nav-link interactable">Services</a>
@@ -46,336 +42,583 @@
             <a href="#faq" class="nav-link interactable">FAQ</a>
             <a href="#contact" class="btn-nav interactable">Plan My Trip</a>
         </div>
+        <button class="hamburger interactable" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
     </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" class="nav-link interactable" onclick="closeMobileMenu()">About</a>
+        <a href="#services" class="nav-link interactable" onclick="closeMobileMenu()">Services</a>
+        <a href="#gallery" class="nav-link interactable" onclick="closeMobileMenu()">Gallery</a>
+        <a href="#testimonials" class="nav-link interactable" onclick="closeMobileMenu()">Reviews</a>
+        <a href="#faq" class="nav-link interactable" onclick="closeMobileMenu()">FAQ</a>
+        <a href="#contact" class="btn-nav interactable" onclick="closeMobileMenu()">Plan My Trip</a>
+    </div>
 
     <!-- HERO -->
     <section class="hero" id="home">
-        <div class="hero-bg"></div>
+        <div class="hero-bg" id="heroBg"></div>
         <div class="hero-overlay"></div>
-
         <div class="hero-content">
-            <h1 class="split-line">
-                <span>Discover the Hidden Side of Kerala.</span>
+            <div class="hero-tag"><span></span> Munnar &amp; Kerala Experiences</div>
+            <h1>
+                <span class="split-line"><b>Discover the</b></span>
+                <span class="split-line"><b><em style="color:var(--gold);font-style:italic">Hidden Side</em></b></span>
+                <span class="split-line"><b>of Kerala.</b></span>
             </h1>
-
-
-            <p>Experience Munnar, tea plantations, waterfalls, wildlife, adventure, and unforgettable memories with our
-                personalized travel packages.</p>
-
-            <div class="magnetic-wrap interactable">
-                <a href="#contact" class="btn-large">
+            <p class="hero-sub">Explore Munnar's misty tea gardens, roaring waterfalls, exotic wildlife and hidden
+                trails with Holivo Holidays — Kerala's most trusted travel partner.</p>
+            <div class="hero-btns">
+                <a href="#contact" class="btn-primary interactable">
                     <span>Begin Journey</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
+                <a href="#gallery" class="btn-secondary interactable">
+                    <i class="far fa-images"></i>
+                    <span>View Gallery</span>
+                </a>
             </div>
+        </div>
+        <div class="hero-scroll">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
         </div>
     </section>
 
-    <!-- ABOUT US (Redesigned with new image structure) -->
-    <section class="section-padding" id="about">
-        <div class="about">
+    <!-- STATS BAR -->
+    <div class="stats-bar">
+        <div class="stat-item fade-up">
+            <h3>100+</h3>
+            <p>Happy Travellers</p>
+        </div>
+        <div class="stat-item fade-up">
+            <h3>10+</h3>
+            <p>Packages</p>
+        </div>
+        <div class="stat-item fade-up">
+            <h3>25+</h3>
+            <p>Destinations</p>
+        </div>
+        <div class="stat-item fade-up">
+            <h3>100%</h3>
+            <p>Satisfaction</p>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="section-padding about-section" id="about">
+        <div class="about-grid">
             <div class="about-content fade-up">
-                <span class="section-tag">About Us</span>
-                <h2>Curating the<br>Extraordinary.</h2>
-                <p>We believe in crafting experiences that go beyond the ordinary. Based in the beautiful hills of
-                    Munnar, we have deep local knowledge that allows us to reveal the true essence of Kerala.</p>
-                <p>From luxurious stays to thrilling adventures, our personalized touch ensures your journey is
-                    seamless, breathtaking, and utterly unforgettable.</p>
+                <div class="section-tag">About Us</div>
+                <h2 class="section-title">Curating the<br>Extraordinary.</h2>
+                <p class="about-desc">We are Holivo Holidays, a Munnar-based travel company with deep roots in Kerala.
+                    Our local expertise lets us take you beyond tourist trails — to the real, raw, and breathtaking
+                    Kerala.</p>
+                <p class="about-desc">From misty Munnar tea estates to the serene backwaters of Alleppey, every trip we
+                    craft is personal, precise, and utterly unforgettable.</p>
+                <div class="about-features">
+                    <div class="feature-item interactable">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>Expert Guided Tours</h4>
+                        <p>Local guides with 10+ years of experience</p>
+                    </div>
+                    <div class="feature-item interactable">
+                        <i class="fas fa-shield-alt"></i>
+                        <h4>Safe & Trusted</h4>
+                        <p>Fully insured and government-approved</p>
+                    </div>
+                    <div class="feature-item interactable">
+                        <i class="fas fa-star"></i>
+                        <h4>Premium Service</h4>
+                        <p>5-star hospitality at every touchpoint</p>
+                    </div>
+                    <div class="feature-item interactable">
+                        <i class="fas fa-phone-alt"></i>
+                        <h4>24/7 Support</h4>
+                        <p>Always here whenever you need us</p>
+                    </div>
+                </div>
             </div>
             <div class="about-images fade-up">
-                <img src="assets/images/about-dummy.jpg" alt="Kerala Landscapes" class="about-img-main">
-                <img src="assets/images/office.jpg" alt="Holivo Office" class="about-img-sub">
+                <div class="about-img-main">
+                    <img src="assets/images/about-main.jpg" alt="Munnar tea gardens Kerala landscape">
+                </div>
+                <div class="about-img-sub">
+                    <img src="assets/images/about-dummy.jpg" alt="Holivo Holidays team Munnar office">
+                </div>
+                <!-- <div class="about-badge">
+                    <span class="num">100%</span>
+                    <span class="lbl">Proffessional</span>
+                </div> -->
             </div>
         </div>
     </section>
 
-    <!-- SERVICES (Expandable Accordion) -->
-    <section class="section-padding services" id="services">
-        <span class="section-tag fade-up">Our Expertise</span>
-        <h2 class="fade-up">Bespoke Services.</h2>
-
+    <!-- SERVICES -->
+    <section class="section-padding services-section" id="services">
+        <div class="services-header">
+            <div>
+                <div class="section-tag fade-up">Our Expertise</div>
+                <h2 class="section-title fade-up">Bespoke Services.</h2>
+            </div>
+            <a href="#contact" class="btn-primary interactable fade-up">Enquire Now <i
+                    class="fas fa-arrow-right"></i></a>
+        </div>
         <div class="accordion fade-up">
-            <!-- Service 1 -->
+
             <div class="accordion-item">
-                <button class="accordion-header">
-                    <span><span
-                            style="color:var(--primary); font-family:'Outfit'; font-size:1.2rem; margin-right:20px;">01.</span>
-                        Tour Planning</span>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
+                <button class="accordion-header interactable">
+                    <div class="acc-left"><span class="acc-num">01.</span><span>Tour Planning</span></div>
+                    <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
                 </button>
                 <div class="accordion-content">
-                    <p>We meticulously craft itineraries designed around your interests, pace, and travel style. From
-                        identifying the best routes to timing your visits to avoid crowds, our tour planning guarantees
-                        a seamless and enriching journey.</p>
-                </div>
-            </div>
-
-            <!-- Service 2 -->
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span><span
-                            style="color:var(--primary); font-family:'Outfit'; font-size:1.2rem; margin-right:20px;">02.</span>
-                        Holiday Packages</span>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <p>Discover the best of Kerala's landscapes and culture with our curated packages. Whether you are
-                        looking for a romantic honeymoon, a family getaway, or a solo expedition, we have packages
-                        tailored to fit your dreams perfectly.</p>
-                </div>
-            </div>
-
-            <!-- Service 3 -->
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span><span
-                            style="color:var(--primary); font-family:'Outfit'; font-size:1.2rem; margin-right:20px;">03.</span>
-                        Hotel Bookings</span>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <p>Rest in luxury and authentic charm. We hold exclusive partnerships with premium resorts, boutique
-                        homestays, and hidden gems across Kerala, ensuring you get the best rates, views, and
-                        hospitality available.</p>
-                </div>
-            </div>
-
-            <!-- Service 4 -->
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span><span
-                            style="color:var(--primary); font-family:'Outfit'; font-size:1.2rem; margin-right:20px;">04.</span>
-                        Transportation</span>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <p>Travel in utmost comfort with our fleet of air-conditioned vehicles. Our professional,
-                        English-speaking local drivers act as your navigators and companions, ensuring safe and
-                        picturesque transit across the state.</p>
-                </div>
-            </div>
-
-            <!-- Service 5 -->
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span><span
-                            style="color:var(--primary); font-family:'Outfit'; font-size:1.2rem; margin-right:20px;">05.</span>
-                        Adventure Tours</span>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <p>Feed your adrenaline with our expertly guided adventure tours. Experience trekking through the
-                        Western Ghats, wildlife safaris in Periyar, bamboo rafting, and thrilling activities perfectly
-                        balanced with nature.</p>
-                </div>
-            </div>
-
-            <!-- Service 6 -->
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span><span
-                            style="color:var(--primary); font-family:'Outfit'; font-size:1.2rem; margin-right:20px;">06.</span>
-                        Custom Packages</span>
-                    <i class="fas fa-chevron-down accordion-icon"></i>
-                </button>
-                <div class="accordion-content">
-                    <p>Have something specific in mind? Let us build a fully bespoke travel experience tailored entirely
-                        to your imagination. You dream it, and we bring it to life with precision and luxury.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <!-- GALLERY -->
-    <section class="section-padding" id="gallery">
-        <span class="section-tag fade-up">Visuals</span>
-        <h2 class="fade-up" style="font-size: clamp(3rem, 5vw, 5rem); margin-bottom: 60px; color: var(--secondary);">The
-            Collection.</h2>
-
-        <div class="gallery-grid">
-            <div class="g-item interactable" onclick="openLightbox('assets/images/exterior.jpg')">
-                <img src="assets/images/exterior.jpg" alt="Exterior">
-                <div class="g-overlay"><span class="g-text">Architecture</span></div>
-            </div>
-            <div class="g-item interactable" onclick="openLightbox('assets/images/poster-dark.jpg')">
-                <img src="assets/images/poster-dark.jpg" alt="Dark Poster">
-                <div class="g-overlay"><span class="g-text">Experiences</span></div>
-            </div>
-            <div class="g-item interactable" onclick="openLightbox('assets/images/poster-light.jpg')">
-                <img src="assets/images/poster-light.jpg" alt="Light Poster">
-                <div class="g-overlay"><span class="g-text">Landscapes</span></div>
-            </div>
-            <div class="g-item interactable" onclick="openLightbox('assets/images/office.jpg')">
-                <img src="assets/images/office.jpg" alt="Office">
-                <div class="g-overlay"><span class="g-text">Our Space</span></div>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- TESTIMONIALS (New Section) -->
-    <section class="section-padding testimonials" id="testimonials">
-        <span class="section-tag fade-up">Reviews</span>
-        <h2 class="fade-up" style="font-size: clamp(3rem, 4vw, 4rem); color: var(--secondary);">What Our Guests Say.
-        </h2>
-
-        <div class="testi-grid fade-up">
-            <div class="testi-card">
-                <i class="fas fa-quote-right"></i>
-                <p class="testi-text">"Holivo Holidays planned our perfect honeymoon. The attention to detail and the
-                    boutique stays they recommended were absolutely phenomenal. Highly recommend!"</p>
-                <div class="testi-author">
-                    <div class="testi-avatar">S</div>
-                    <div>
-                        <h4 style="color:var(--secondary); font-family:'Outfit',sans-serif;">Sarah & James</h4>
-                        <span style="color:var(--text-light); font-size:0.9rem;">United Kingdom</span>
+                    <div class="accordion-body">
+                        <p>We meticulously craft itineraries around your interests, pace, and travel style — identifying
+                            the best routes and timing your visits to avoid crowds, guaranteeing a seamless and
+                            enriching journey.</p>
+                        <div class="service-tags">
+                            <span class="service-tag">Custom Routes</span>
+                            <span class="service-tag">Local Guides</span>
+                        </div>
                     </div>
                 </div>
             </div>
 
+            <div class="accordion-item">
+                <button class="accordion-header interactable">
+                    <div class="acc-left"><span class="acc-num">02.</span><span>Holiday Packages</span></div>
+                    <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p>Discover Kerala's landscapes and culture with our curated packages. Whether you're planning a
+                            romantic honeymoon, a family getaway, or a solo expedition — we have packages to fit your
+                            every dream.</p>
+                        <div class="service-tags">
+                            <span class="service-tag">Honeymoon</span>
+                            <span class="service-tag">Family</span>
+                            <span class="service-tag">Solo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header interactable">
+                    <div class="acc-left"><span class="acc-num">03.</span><span>Hotel Bookings</span></div>
+                    <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p>Rest in luxury and authentic charm. We hold exclusive partnerships with premium resorts,
+                            boutique homestays, and hidden gems across Kerala — ensuring you get the best rates and
+                            views available.</p>
+                        <div class="service-tags">
+                            <span class="service-tag">Luxury Resorts</span>
+                            <span class="service-tag">Homestays</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header interactable">
+                    <div class="acc-left"><span class="acc-num">04.</span><span>Transportation</span></div>
+                    <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p>Travel in utmost comfort with our fleet of air-conditioned vehicles. Our professional,
+                            local drivers act as navigators and companions — ensuring safe and
+                            picturesque transit across the state.</p>
+                        <div class="service-tags">
+                            <span class="service-tag">AC Vehicles</span>
+                            <span class="service-tag">Airport Pickup</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header interactable">
+                    <div class="acc-left"><span class="acc-num">05.</span><span>Adventure Tours</span></div>
+                    <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p>Feed your adrenaline with expertly guided adventure tours. Trekking through the Western
+                            Ghats, wildlife safaris in Periyar, bamboo rafting, and thrilling activities perfectly
+                            balanced with nature.</p>
+                        <div class="service-tags">
+                            <span class="service-tag">Trekking</span>
+                            <span class="service-tag">Safari</span>
+                            <span class="service-tag">Rafting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <button class="accordion-header interactable">
+                    <div class="acc-left"><span class="acc-num">06.</span><span>Custom Packages</span></div>
+                    <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                </button>
+                <div class="accordion-content">
+                    <div class="accordion-body">
+                        <p>Have something specific in mind? Let us build a fully bespoke travel experience tailored
+                            entirely to your imagination. You dream it — and we bring it to life with precision and
+                            luxury.</p>
+                        <div class="service-tags">
+                            <span class="service-tag">Fully Custom</span>
+                            <span class="service-tag">Any Budget</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section class="section-padding gallery-section" id="gallery">
+        <div class="section-tag fade-up">Visuals</div>
+        <h2 class="section-title fade-up" style="color:var(--cream)">The Collection.</h2>
+        <div class="gallery-grid">
+            <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                <img src="assets/images/gallery-1.jpg" alt="Munnar hills tea plantations Kerala">
+                <div class="g-overlay">
+                    <span class="g-label">Munnar Hills</span>
+                    <span class="g-view">Click to expand</span>
+                </div>
+            </div>
+            <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-2.jpg')">
+                <img src="assets/images/gallery-2.jpg" alt="Kerala tea estates Munnar">
+                <div class="g-overlay">
+                    <span class="g-label">Tea Estates</span>
+                    <span class="g-view">Click to expand</span>
+                </div>
+            </div>
+            <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-3.jpg')">
+                <img src="assets/images/gallery-3.jpg" alt="Athirapally waterfall Kerala">
+                <div class="g-overlay">
+                    <span class="g-label">Waterfalls</span>
+                    <span class="g-view">Click to expand</span>
+                </div>
+            </div>
+            <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-4.jpg')">
+                <img src="assets/images/gallery-4.jpg" alt="Kerala wildlife Periyar forest">
+                <div class="g-overlay">
+                    <span class="g-label">Wildlife</span>
+                    <span class="g-view">Click to expand</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section-padding testimonials-section" id="testimonials">
+        <div class="section-tag fade-up">Reviews</div>
+        <h2 class="section-title fade-up" style="color:var(--cream)">What Guests Say.</h2>
+        <div class="testi-grid fade-up">
             <div class="testi-card">
-                <i class="fas fa-quote-right"></i>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i></div>
+                <p class="testi-text">"Holivo Holidays planned our perfect Kerala honeymoon. The attention to detail and
+                    the boutique stays they recommended were absolutely phenomenal. Highly recommend!"</p>
+                <div class="testi-author">
+                    <div class="testi-avatar">S</div>
+                    <div>
+                        <div class="testi-name">Sarah & James</div>
+                        <div class="testi-place">United Kingdom</div>
+                    </div>
+                </div>
+            </div>
+            <div class="testi-card">
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 <p class="testi-text">"The Munnar tea estate tour was breathtaking. Our driver was incredibly
                     knowledgeable and courteous. A premium experience from start to finish."</p>
                 <div class="testi-author">
                     <div class="testi-avatar">R</div>
                     <div>
-                        <h4 style="color:var(--secondary); font-family:'Outfit',sans-serif;">Rahul Sharma</h4>
-                        <span style="color:var(--text-light); font-size:0.9rem;">Delhi, India</span>
+                        <div class="testi-name">Rahul Sharma</div>
+                        <div class="testi-place">Delhi, India</div>
                     </div>
                 </div>
             </div>
-
             <div class="testi-card">
-                <i class="fas fa-quote-right"></i>
+                <div class="stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                        class="fas fa-star"></i><i class="fas fa-star"></i></div>
                 <p class="testi-text">"We wanted an off-beat adventure and Holivo delivered! From trekking to wildlife
-                    spotting, everything was perfectly organized."</p>
+                    spotting, everything was perfectly organized. An experience we'll never forget."</p>
                 <div class="testi-author">
                     <div class="testi-avatar">E</div>
                     <div>
-                        <h4 style="color:var(--secondary); font-family:'Outfit',sans-serif;">Emily Chen</h4>
-                        <span style="color:var(--text-light); font-size:0.9rem;">Singapore</span>
+                        <div class="testi-name">Emily Chen</div>
+                        <div class="testi-place">Singapore</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- BANNER PARALLAX -->
+    <!-- BANNER -->
     <section class="banner">
-        <div class="banner-bg"></div>
+        <div class="banner-bg" id="bannerBg"></div>
         <div class="banner-overlay"></div>
-        <div class="banner-text fade-up">
-            <h2 class="serif">Experience The Magic</h2>
-            <p>Explore tea gardens, mountains, waterfalls, and hidden destinations.</p>
+        <div class="banner-content fade-up" style="max-width:800px;margin:0 auto;padding:0 20px">
+            <h2>Experience God's Own Country.</h2>
+            <p>Tea gardens, misty hills, waterfalls, Eravikulam National Park and hidden Kerala gems await.</p>
+            <a href="#contact" class="btn-primary interactable">Start Planning <i class="fas fa-arrow-right"></i></a>
         </div>
     </section>
 
-    <!-- FAQ SECTION (New Section) -->
-    <section class="section-padding" id="faq" style="background-color: var(--bg-color);">
-        <span class="section-tag fade-up">FAQ</span>
-        <h2 class="fade-up" style="font-size: clamp(3rem, 4vw, 4rem); color: var(--secondary); margin-bottom: 50px;">
-            Frequently Asked Questions.</h2>
+    <!-- FAQ -->
+    <section class="section-padding faq-section" id="faq">
+        <div class="faq-grid">
+            <div class="faq-intro fade-up">
+                <div class="section-tag">FAQ</div>
+                <h2 class="section-title">Common Questions.</h2>
+                <p>Can't find your answer? Feel free to reach out to us directly — we're always happy to help plan your
+                    perfect trip.</p>
+                <br>
+                <a href="#contact" class="btn-primary interactable" style="display:inline-flex;margin-top:10px">Ask Us
+                    <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="accordion faq-accordion fade-up">
+                <div class="accordion-item">
+                    <button class="accordion-header interactable">
+                        <div class="acc-left"><span>What is the best time to visit Kerala?</span></div>
+                        <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>There is no single best time to visit Kerala, as every season offers a unique experience.
+                                Whether it's the lush greenery after the monsoon, the pleasant weather, or the vibrant
+                                cultural atmosphere, Kerala has something special to offer throughout the year.</p>
+                        </div>
+                    </div>
+                </div>
 
-        <div class="accordion faq-accordion fade-up" style="max-width: 800px;">
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span>What is the best time to visit Kerala?</span>
-                    <i class="fas fa-plus accordion-icon" style="font-size: 1rem;"></i>
-                </button>
-                <div class="accordion-content">
-                    <p>The best time to visit Kerala is between September to March. The weather is pleasant, the
-                        monsoons have left the hills lush green, and the humidity is much lower.</p>
+                <div class="accordion-item">
+                    <button class="accordion-header interactable">
+                        <div class="acc-left"><span>Are meals included in the packages?</span></div>
+                        <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Yes, most packages include complimentary breakfast. Houseboat stays typically include all
+                                meals. We can also customize meal plans according to your dietary preferences.</p>
+                        </div>
+                    </div>
                 </div>
-            </div>
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span>Do you assist with visa applications?</span>
-                    <i class="fas fa-plus accordion-icon" style="font-size: 1rem;"></i>
-                </button>
-                <div class="accordion-content">
-                    <p>While we do not process visas directly, our team provides comprehensive guidance and necessary
-                        documents like hotel vouchers and itineraries required for your Indian e-Visa application.</p>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <button class="accordion-header">
-                    <span>Are meals included in your packages?</span>
-                    <i class="fas fa-plus accordion-icon" style="font-size: 1rem;"></i>
-                </button>
-                <div class="accordion-content">
-                    <p>Yes, most of our packages include complimentary breakfast at your hotels. Houseboat stays
-                        typically include all meals (lunch, dinner, and breakfast). We can also customize meal plans
-                        according to your preference.</p>
+                <div class="accordion-item">
+                    <button class="accordion-header interactable">
+                        <div class="acc-left"><span>How do I book a trip with Holivo?</span></div>
+                        <div class="acc-icon"><i class="fas fa-chevron-down"></i></div>
+                    </button>
+                    <div class="accordion-content">
+                        <div class="accordion-body">
+                            <p>Simply reach out to us via phone, WhatsApp, or email. Share your travel dates, interests,
+                                and budget — and our team will craft a personalized itinerary for you within 24 hours.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+
+    <!-- OUR OFFICE SECTION -->
+    <section class="section-padding office-section" id="office">
+        <div class="section-tag fade-up">Visit Us</div>
+        <h2 class="section-title fade-up" style="color:var(--cream)">Our Office<br>in Munnar.</h2>
+        <div class="office-grid fade-up">
+            <div class="office-images">
+                <div class="office-img-large interactable" onclick="openLightbox('assets/images/exterior.jpg')">
+                    <img src="assets/images/exterior.jpg" alt="Holivo Holidays office exterior Munnar">
+                    <div class="office-img-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+                <div class="office-img-small interactable" onclick="openLightbox('assets/images/office.jpg')">
+                    <img src="assets/images/office.jpg" alt="Holivo Holidays office interior Munnar">
+                    <div class="office-img-overlay"><i class="fas fa-expand"></i></div>
+                </div>
+            </div>
+            <div class="office-map">
+                <div class="map-wrap">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3927.957837754152!2d76.92875037457381!3d10.102537090008171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b079130b6e462cf%3A0xac3908f8a8b386f5!2sHOLIVO%20HOLIDAYS!5e0!3m2!1sen!2sin!4v1782117836554!5m2!1sen!2sin"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade" title="Holivo Holidays Location Munnar"></iframe>
+                </div>
+                <div class="map-info">
+                    <div class="map-info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Holivo Holidays, Munnar, Kerala, India</span>
+                    </div>
+                    <div class="map-info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Open: Mon – Sat, 9:00 AM – 9:00 PM</span>
+                    </div>
+                    <a href="https://maps.google.com?q=HOLIVO+HOLIDAYS+Munnar" target="_blank"
+                        class="btn-primary interactable" style="display:inline-flex;margin-top:20px">Get Directions <i
+                            class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SCROLL TICKER BANNER -->
+    <div class="ticker-wrap">
+        <div class="ticker-track">
+            <span class="ticker-item"><i class="fas fa-map-marker-alt"></i> Munnar, Kerala</span>
+            <span class="ticker-item"><i class="fas fa-star"></i> Premium Kerala Tours</span>
+            <span class="ticker-item"><i class="fas fa-leaf"></i> Tea Gardens &amp; Misty Hills</span>
+            <span class="ticker-item"><i class="fas fa-water"></i> Waterfalls &amp; Backwaters</span>
+            <span class="ticker-item"><i class="fas fa-paw"></i> Wildlife &amp; Nature</span>
+            <span class="ticker-item"><i class="fas fa-phone-alt"></i> +91 98471 34120</span>
+            <span class="ticker-item"><i class="fas fa-hotel"></i> Luxury &amp; Boutique Stays</span>
+            <span class="ticker-item"><i class="fas fa-car"></i> Private Transportation</span>
+            <!-- Duplicate for seamless loop -->
+            <span class="ticker-item"><i class="fas fa-map-marker-alt"></i> Munnar, Kerala</span>
+            <span class="ticker-item"><i class="fas fa-star"></i> Premium Kerala Tours</span>
+            <span class="ticker-item"><i class="fas fa-leaf"></i> Tea Gardens &amp; Misty Hills</span>
+            <span class="ticker-item"><i class="fas fa-water"></i> Waterfalls &amp; Backwaters</span>
+            <span class="ticker-item"><i class="fas fa-paw"></i> Wildlife &amp; Nature</span>
+            <span class="ticker-item"><i class="fas fa-phone-alt"></i> +91 98471 34120</span>
+            <span class="ticker-item"><i class="fas fa-hotel"></i> Luxury &amp; Boutique Stays</span>
+            <span class="ticker-item"><i class="fas fa-car"></i> Private Transportation</span>
+        </div>
+    </div>
     <!-- CONTACT -->
-    <section id="contact" style="padding-bottom: 0;">
-        <div class="contact-wrap fade-up">
-            <div class="contact-info">
-                <span class="section-tag">Get In Touch</span>
-                <h2>Start<br>Planning.</h2>
-
-                <div class="contact-info-list">
+    <section class="section-padding contact-section" id="contact">
+        <div class="contact-grid">
+            <div class="contact-info fade-up">
+                <div class="section-tag">Get In Touch</div>
+                <h2 class="section-title">Start Planning<br>Your Trip.</h2>
+                <p>Ready to explore Kerala? Our travel experts are here to create the perfect itinerary tailored just
+                    for you.</p>
+                <div class="contact-details">
                     <div class="c-item">
-                        <h4>Location</h4>
-                        <p>Munnar, Kerala, India</p>
+                        <div class="c-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <div class="c-label">Location</div>
+                            <div class="c-value">Munnar, Kerala, India</div>
+                        </div>
                     </div>
                     <div class="c-item">
-                        <h4>Email</h4>
-                        <a href="mailto:info@holivoholidays.com" class="interactable">info@holivoholidays.com</a>
+                        <div class="c-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <div class="c-label">Email</div>
+                            <div class="c-value"><a href="mailto:holivoholidays@gmail.com"
+                                    class="interactable">holivoholidays@gmail.com</a></div>
+                        </div>
                     </div>
                     <div class="c-item">
-                        <h4>Phone</h4>
-                        <a href="tel:+919999999999" class="interactable">+91 99999 99999</a>
+                        <div class="c-icon"><i class="fas fa-phone-alt"></i></div>
+                        <div>
+                            <div class="c-label">Phone &amp; WhatsApp</div>
+                            <div class="c-value"><a href="tel:+919847134120" class="interactable">+91 98471 34120</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="contact-btns">
-                <a href="tel:+919999999999" class="btn-xl interactable">
-                    <span>Call Now</span>
+            <div class="contact-actions fade-up">
+                <a href="tel:+919847134120" class="btn-action interactable">
+                    <div class="btn-action-left">
+                        <i class="fas fa-phone-alt"></i>
+                        <div>
+                            <div>Call Us Directly</div>
+                            <div class="btn-action-sub">+91 98471 34120 &bull; 9am – 9pm IST</div>
+                        </div>
+                    </div>
                     <i class="fas fa-arrow-right"></i>
                 </a>
-                <a href="https://wa.me/919999999999?text=Hello%20Holivo%20Holidays%2C%20I%20would%20like%20to%20plan%20my%20Kerala%20trip."
-                    target="_blank" class="btn-xl btn-whatsapp-xl interactable">
-                    <span>WhatsApp Us</span>
-                    <i class="fab fa-whatsapp"></i>
+                <a href="https://wa.me/919847134120?text=Hello%20Holivo%20Holidays%2C%20I%20would%20like%20to%20plan%20my%20Kerala%20trip."
+                    target="_blank" class="btn-action wa interactable">
+                    <div class="btn-action-left">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <div>Chat on WhatsApp</div>
+                            <div class="btn-action-sub">Quick response guaranteed</div>
+                        </div>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="mailto:holivoholidays@gmail.com" class="btn-action interactable">
+                    <div class="btn-action-left">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <div>Send an Email</div>
+                            <div class="btn-action-sub">holivoholidays@gmail.com</div>
+                        </div>
+                    </div>
+                    <i class="fas fa-arrow-right"></i>
                 </a>
             </div>
         </div>
     </section>
+
+
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-content">
-            <h2 class="footer-logo">HOLIVO.</h2>
-            <div class="footer-tagline">Discover the Hidden Side of Kerala.</div>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <span class="logo" style="font-size:1.6rem">Holivo Holidays.</span>
+                <p>Holivo Holidays — crafting extraordinary Kerala travel experiences from Munnar. Your
+                    journey through God's Own Country begins here.</p>
+                <div class="footer-social" style="margin-top:24px">
+                    <a href="#" class="interactable"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="interactable"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="interactable"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#" class="interactable"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h5>Navigate</h5>
+                <a href="#about" class="interactable">About Us</a>
+                <a href="#services" class="interactable">Services</a>
+                <a href="#gallery" class="interactable">Gallery</a>
+                <a href="#testimonials" class="interactable">Reviews</a>
+                <a href="#faq" class="interactable">FAQ</a>
+            </div>
+            <div class="footer-col">
+                <h5>Contact</h5>
+                <a href="tel:+919847134120" class="interactable">+91 98471 34120</a>
+                <a href="mailto:holivoholidays@gmail.com" class="interactable">holivoholidays@gmail.com</a>
+                <a href="#office" class="interactable">Munnar, Kerala</a>
+            </div>
         </div>
-        <div class="copyright">
-            <span>&copy; 2026 Holivo Holidays.</span>
-            <span>All Rights Reserved.</span>
+        <div class="footer-bottom">
+            <span>&copy; 2026 Holivo Holidays Pvt. Ltd. All Rights Reserved.</span>
+            <div class="footer-social">
+                <a href="#" class="interactable"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="interactable"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="interactable"><i class="fab fa-whatsapp"></i></a>
+            </div>
         </div>
     </footer>
 
-    <!-- FLOATING WA -->
-    <a href="https://wa.me/919999999999?text=Hello%20Holivo%20Holidays%2C%20I%20would%20like%20to%20plan%20my%20Kerala%20trip."
-        class="float-wa interactable" target="_blank">
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/919847134120?text=Hello%20Holivo%20Holidays%2C%20I%20would%20like%20to%20plan%20my%20Kerala%20trip."
+        class="float-wa interactable" target="_blank" aria-label="WhatsApp">
         <i class="fab fa-whatsapp"></i>
     </a>
 
     <!-- LIGHTBOX -->
-    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
-        <div class="lightbox-close"><i class="fas fa-times"></i></div>
-        <img src="" alt="Enlarged image" id="lightbox-img" onclick="event.stopPropagation()">
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-backdrop" onclick="closeLightbox()"></div>
+        <div class="lightbox-inner">
+            <div class="lightbox-close interactable" onclick="closeLightbox()"><i class="fas fa-times"></i></div>
+            <img src="" id="lightboxImg" alt="Gallery Image">
+        </div>
     </div>
 
-    <!-- SCRIPTS -->
     <script src="assets/js/main.js"></script>
 </body>
 
