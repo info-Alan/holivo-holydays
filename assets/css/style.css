@@ -1552,6 +1552,16 @@ footer {
 }
 
 @media(max-width:768px) {
+
+    .cursor-dot,
+    .cursor-outline {
+        display: none !important;
+    }
+
+    * {
+        cursor: auto !important;
+    }
+
     .nav-links {
         display: none
     }
@@ -1607,11 +1617,11 @@ footer {
     }
 
     .logo img {
-        height: 10px;
+        height: 28px;
     }
 
     .logo-text {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
         margin-left: 8px;
     }
 
@@ -1619,8 +1629,19 @@ footer {
         width: 140px !important;
     }
 
+    .office-grid {
+        gap: 40px;
+    }
+
+    .office-img-large {
+        height: 240px;
+        grid-column: 1 / -1;
+    }
+
     .office-img-small {
-        display: none
+        display: block;
+        height: 200px;
+        grid-column: 1 / -1;
     }
 
     .g-overlay {
