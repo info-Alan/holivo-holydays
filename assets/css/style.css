@@ -118,7 +118,8 @@ img {
     overflow: hidden
 }
 
-.preloader-logo span, .preloader-logo img {
+.preloader-logo span,
+.preloader-logo img {
     display: inline-block;
     transform: translateY(100%);
     animation: slideUp .9s var(--ease) forwards
@@ -1604,8 +1605,9 @@ footer {
     .office-images {
         grid-template-columns: 1fr
     }
+
     .logo img {
-        height: 28px;
+        height: 10px;
     }
 
     .logo-text {
@@ -1616,6 +1618,7 @@ footer {
     .preloader-logo img {
         width: 140px !important;
     }
+
     .office-img-small {
         display: none
     }
