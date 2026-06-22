@@ -118,7 +118,7 @@ img {
     overflow: hidden
 }
 
-.preloader-logo span {
+.preloader-logo span, .preloader-logo img {
     display: inline-block;
     transform: translateY(100%);
     animation: slideUp .9s var(--ease) forwards
@@ -212,7 +212,8 @@ nav.scrolled {
 
 .logo-text {
     font-size: 1.5rem;
-    color: var(--gold)
+    color: var(--gold);
+    margin-left: 10px;
 }
 
 .nav-links {
@@ -1603,7 +1604,18 @@ footer {
     .office-images {
         grid-template-columns: 1fr
     }
+    .logo img {
+        height: 28px;
+    }
 
+    .logo-text {
+        font-size: 1.1rem;
+        margin-left: 8px;
+    }
+
+    .preloader-logo img {
+        width: 140px !important;
+    }
     .office-img-small {
         display: none
     }
