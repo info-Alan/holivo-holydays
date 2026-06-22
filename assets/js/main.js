@@ -46,7 +46,8 @@ const bannerBg = document.getElementById('bannerBg');
 
 window.addEventListener('scroll', () => {
   const s = window.scrollY;
-  if (heroBg) heroBg.style.transform = `translateY(${s * 0.35}px)`;
+  // Use backgroundPositionY for parallax — no image scaling, stays crisp
+  if (heroBg) heroBg.style.backgroundPositionY = `calc(50% + ${s * 0.3}px)`;
   if (bannerBg) {
     const rect = bannerBg.closest('.banner').getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom > 0) {
@@ -131,4 +132,30 @@ function closeLightbox() {
 
 document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeLightbox();
+});
+
+// --- GALLERY TABS ---
+const galleryTabs = document.querySelectorAll('.gallery-tab');
+const galleryContents = document.querySelectorAll('.gallery-content');
+
+galleryTabs.forEach(tab => {
+  tab.addEventListener('click', () => {
+    galleryTabs.forEach(t => t.classList.remove('active'));
+    galleryContents.forEach(c => c.classList.remove('active'));
+    
+    tab.classList.add('active');
+    
+    const target = tab.getAttribute('data-target');
+    const content = document.getElementById('gallery-' + target);
+    if(content) {
+      content.classList.add('active');
+      
+      // Re-trigger fade-up animation for items inside the newly active tab
+      const items = content.querySelectorAll('.fade-up');
+      items.forEach(item => {
+        item.classList.remove('in-view');
+        setTimeout(() => item.classList.add('in-view'), 50);
+      });
+    }
+  });
 });

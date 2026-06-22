@@ -26,14 +26,18 @@
     <!-- PRELOADER -->
     <div class="preloader" id="preloader">
         <div class="preloader-logo" style="font-size:2rem;letter-spacing:.15em">
-            <span>H</span><span>o</span><span>l</span><span>i</span><span>v</span><span>o</span>&nbsp;<span>H</span><span>o</span><span>l</span><span>i</span><span>d</span><span>a</span><span>y</span><span>s</span>
+            <img src="assets/images/logo.png" alt="logo" style="width: 200px;">
+
         </div>
         <div class="preloader-line"></div>
     </div>
 
     <!-- NAV -->
     <nav id="navbar">
-        <a href="#" class="logo interactable">Holivo Holidays</a>
+        <a href="#" class="logo interactable">
+            <img src="assets/images/logo.png" alt="logo">
+            <span class="logo-text">Holivo Holidays</span>
+        </a>
         <div class="nav-links">
             <a href="#about" class="nav-link interactable">About</a>
             <a href="#services" class="nav-link interactable">Services</a>
@@ -62,13 +66,12 @@
         <div class="hero-bg" id="heroBg"></div>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <div class="hero-tag"><span></span> Munnar &amp; Kerala Experiences</div>
+            <div class="hero-tag"><span></span> Discover the Hidden Side of Kerala</div>
             <h1>
-                <span class="split-line"><b>Discover the</b></span>
-                <span class="split-line"><b><em style="color:var(--gold);font-style:italic">Hidden Side</em></b></span>
-                <span class="split-line"><b>of Kerala.</b></span>
+                <span class="split-line"><b>Explore God's Own Country</b></span>
             </h1>
-            <p class="hero-sub">Explore Munnar's misty tea gardens, roaring waterfalls, exotic wildlife and hidden
+            <p class="hero-sub">Discover mountains, misty tea gardens, beaches, roaring waterfalls, exotic wildlife and
+                hidden
                 trails with Holivo Holidays — Kerala's most trusted travel partner.</p>
             <div class="hero-btns">
                 <a href="#contact" class="btn-primary interactable">
@@ -113,10 +116,12 @@
             <div class="about-content fade-up">
                 <div class="section-tag">About Us</div>
                 <h2 class="section-title">Curating the<br>Extraordinary.</h2>
-                <p class="about-desc">We are Holivo Holidays, a Munnar-based travel company with deep roots in Kerala.
+                <p class="about-desc">We are Holivo Holidays, a Kerala-based travel company with deep roots in Kerala.
                     Our local expertise lets us take you beyond tourist trails — to the real, raw, and breathtaking
                     Kerala.</p>
-                <p class="about-desc">From misty Munnar tea estates to the serene backwaters of Alleppey, every trip we
+                <p class="about-desc">From misty Munnar tea estates to the serene backwaters of Alleppey,From mountains
+                    to
+                    sea shores, every trip we
                     craft is personal, precise, and utterly unforgettable.</p>
                 <div class="about-features">
                     <div class="feature-item interactable">
@@ -127,7 +132,7 @@
                     <div class="feature-item interactable">
                         <i class="fas fa-shield-alt"></i>
                         <h4>Safe & Trusted</h4>
-                        <p>Fully insured and government-approved</p>
+                        <p>Every journey is safe and every moment is protected</p>
                     </div>
                     <div class="feature-item interactable">
                         <i class="fas fa-star"></i>
@@ -249,12 +254,11 @@
                 <div class="accordion-content">
                     <div class="accordion-body">
                         <p>Feed your adrenaline with expertly guided adventure tours. Trekking through the Western
-                            Ghats, wildlife safaris in Periyar, bamboo rafting, and thrilling activities perfectly
+                            Ghats, wildlife safaris, and thrilling activities perfectly
                             balanced with nature.</p>
                         <div class="service-tags">
                             <span class="service-tag">Trekking</span>
                             <span class="service-tag">Safari</span>
-                            <span class="service-tag">Rafting</span>
                         </div>
                     </div>
                 </div>
@@ -285,33 +289,252 @@
     <section class="section-padding gallery-section" id="gallery">
         <div class="section-tag fade-up">Visuals</div>
         <h2 class="section-title fade-up" style="color:var(--cream)">The Collection.</h2>
-        <div class="gallery-grid">
-            <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
-                <img src="assets/images/gallery-1.jpg" alt="Munnar hills tea plantations Kerala">
-                <div class="g-overlay">
-                    <span class="g-label">Munnar Hills</span>
-                    <span class="g-view">Click to expand</span>
+        <div class="gallery-tabs fade-up">
+            <button class="gallery-tab active interactable" data-target="munnar">Munnar</button>
+            <button class="gallery-tab interactable" data-target="mankulam">Mankulam</button>
+            <button class="gallery-tab interactable" data-target="vattavada">Vattavada</button>
+            <button class="gallery-tab interactable" data-target="vagamon">Vagamon</button>
+            <button class="gallery-tab interactable" data-target="alappuzha">Alappuzha</button>
+            <button class="gallery-tab interactable" data-target="varkala">Varkala</button>
+            <button class="gallery-tab interactable" data-target="athirappilly">Athirappilly</button>
+        </div>
+
+        <div class="gallery-content-wrap">
+            <!-- MUNNAR -->
+            <div class="gallery-content active" id="gallery-munnar">
+                <div class="gallery-grid">
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/munnar-1.jpg" alt="Munnar-1">
+                        <div class="g-overlay">
+                            <span class="g-label">Munnar</span>
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-2.jpg')">
+                        <img src="assets/images/gallery/munnar-2.jpg" alt="munnar-2">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-3.jpg')">
+                        <img src="assets/images/gallery/munnar-3.jpg" alt="munnar-3">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-4.jpg')">
+                        <img src="assets/images/gallery/munnar-4.jpg" alt="munnar-4">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-2.jpg')">
-                <img src="assets/images/gallery-2.jpg" alt="Kerala tea estates Munnar">
-                <div class="g-overlay">
-                    <span class="g-label">Tea Estates</span>
-                    <span class="g-view">Click to expand</span>
+
+            <!-- MANKULAM -->
+            <div class="gallery-content" id="gallery-mankulam">
+                <div class="gallery-grid">
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/mankulam-1.jpg" alt="Mankulam">
+                        <div class="g-overlay">
+                            <span class="g-label">Mankulam</span>
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-2.jpg')">
+                        <img src="assets/images/gallery/mankulam-2.jpg" alt="mankulam-2">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-3.jpg')">
+                        <img src="assets/images/gallery/mankulam-3.jpg" alt="mankulam-3">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-4.jpg')">
+                        <img src="assets/images/gallery/mankulam-4.jpg" alt="mankulam-4">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-3.jpg')">
-                <img src="assets/images/gallery-3.jpg" alt="Athirapally waterfall Kerala">
-                <div class="g-overlay">
-                    <span class="g-label">Waterfalls</span>
-                    <span class="g-view">Click to expand</span>
+
+            <!-- VATTAVADA -->
+            <div class="gallery-content" id="gallery-vattavada">
+                <div class="gallery-grid">
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/vattavada-1.jpg" alt="Vattavada">
+                        <div class="g-overlay">
+                            <span class="g-label">Vattavada</span>
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/vattavada-2.jpg" alt="Vattavada">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/vattavada-3.jpg" alt="Vattavada">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/vattavada-4.jpg" alt="Vattavada">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-4.jpg')">
-                <img src="assets/images/gallery-4.jpg" alt="Kerala wildlife Periyar forest">
-                <div class="g-overlay">
-                    <span class="g-label">Wildlife</span>
-                    <span class="g-view">Click to expand</span>
+
+            <!-- VAGAMON -->
+            <div class="gallery-content" id="gallery-vagamon">
+                <div class="gallery-grid">
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/vagamon-1.jpg" alt="Vagamon">
+                        <div class="g-overlay">
+                            <span class="g-label">Vagamon</span>
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/vagamon-2.jpg" alt="Vagamon">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/vagamon-3.jpg" alt="Vagamon">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/vagamon-4.jpg" alt="Vagamon">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ALAPPUZHA -->
+            <div class="gallery-content" id="gallery-alappuzha">
+                <div class="gallery-grid">
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/alappuzha-1.jpg" alt="Alappuzha">
+                        <div class="g-overlay">
+                            <span class="g-label">Alappuzha</span>
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/alappuzha-2.jpg" alt="Alappuzha">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/alappuzha-3.jpg" alt="Alappuzha">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/alappuzha-4.jpg" alt="Alappuzha">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- VARKALA -->
+            <div class="gallery-content" id="gallery-varkala">
+                <div class="gallery-grid">
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/varkala-1.jpg" alt="Varkala">
+                        <div class="g-overlay">
+                            <span class="g-label">Varkala</span>
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/varkala-2.jpg" alt="Varkala">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/varkala-3.jpg" alt="Varkala">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/varkala-4.jpg" alt="Varkala">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ATHIRAPPILLY -->
+            <div class="gallery-content" id="gallery-athirappilly">
+                <div class="gallery-grid">
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/athirappilly-1.jpg" alt="Athirappilly">
+                        <div class="g-overlay">
+                            <span class="g-label">Athirappilly</span>
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/athirappilly-2.jpg" alt="Athirappilly">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/athirappilly-3.jpg" alt="Athirappilly">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
+                    <div class="g-item fade-up interactable" onclick="openLightbox('assets/images/gallery-1.jpg')">
+                        <img src="assets/images/gallery/athirappilly-4.jpg" alt="Athirappilly">
+                        <div class="g-overlay">
+
+                            <span class="g-view">Click to expand</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -435,7 +658,7 @@
     <!-- OUR OFFICE SECTION -->
     <section class="section-padding office-section" id="office">
         <div class="section-tag fade-up">Visit Us</div>
-        <h2 class="section-title fade-up" style="color:var(--cream)">Our Office<br>in Munnar.</h2>
+        <h2 class="section-title fade-up" style="color:var(--cream)">Our Office</h2>
         <div class="office-grid fade-up">
             <div class="office-images">
                 <div class="office-img-large interactable" onclick="openLightbox('assets/images/exterior.jpg')">
@@ -570,13 +793,15 @@
         <div class="footer-top">
             <div class="footer-brand">
                 <span class="logo" style="font-size:1.6rem">Holivo Holidays.</span>
-                <p>Holivo Holidays — crafting extraordinary Kerala travel experiences from Munnar. Your
+                <p>Holivo Holidays — crafting extraordinary Kerala travel experiences. Your
                     journey through God's Own Country begins here.</p>
                 <div class="footer-social" style="margin-top:24px">
-                    <a href="#" class="interactable"><i class="fab fa-instagram"></i></a>
-                    <a href="#" class="interactable"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#" class="interactable"><i class="fab fa-whatsapp"></i></a>
-                    <a href="#" class="interactable"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/holivoholiday" class="interactable"><i
+                            class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/14ZyGZd4Ntb/" class="interactable"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a href="https://wa.me/919847134120?text=Hello%20Holivo%20Holidays%2C%20I%20would%20like%20to%20plan%20my%20Kerala%20trip."
+                        class="interactable"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="footer-col">
@@ -597,9 +822,12 @@
         <div class="footer-bottom">
             <span>&copy; 2026 Holivo Holidays Pvt. Ltd. All Rights Reserved.</span>
             <div class="footer-social">
-                <a href="#" class="interactable"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="interactable"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="interactable"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://www.instagram.com/holivoholiday" class="interactable"><i
+                        class="fab fa-instagram"></i></a>
+                <a href="https://www.facebook.com/share/14ZyGZd4Ntb/" class="interactable"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://wa.me/919847134120?text=Hello%20Holivo%20Holidays%2C%20I%20would%20like%20to%20plan%20my%20Kerala%20trip."
+                    class="interactable"><i class="fab fa-whatsapp"></i></a>
             </div>
         </div>
     </footer>
